@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+    }
+
+    /* CARD */
+    div {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 30px;
+        width: 360px;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        transition: 0.3s ease;
+    }
+
+    div:hover {
+        transform: translateY(-5px);
+    }
+
+    /* TITLE */
+    h1 {
+        color: #fff;
+        margin-bottom: 20px;
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    /* INPUT */
+    #Password {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        transition: 0.3s;
+    }
+
+    #Password:focus {
+        transform: scale(1.03);
+    }
+
+    /* BUTTON WRAPPER */
+    button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.3s ease;
+        margin: 5px;
+    }
+
+    /* GENERATE BUTTON */
+    button:nth-child(3) {
+        background: #ff6b6b;
+        color: white;
+    }
+
+    button:nth-child(3):hover {
+        background: #ff4757;
+        transform: scale(1.05);
+    }
+
+    /* COPY BUTTON */
+    button:nth-child(4) {
+        background: #1dd1a1;
+        color: white;
+    }
+
+    button:nth-child(4):hover {
+        background: #10ac84;
+        transform: scale(1.05);
+    }
+</style>
+
+<body>
+    <div>
+        <h1> Password Generator</h1>
+        <input type="text" id="Password">
+        <button onclick="generator()">Generat</button>
+        <button onclick="copy()">Copy</button>
+    </div>
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
