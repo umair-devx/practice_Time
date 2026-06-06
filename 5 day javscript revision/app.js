@@ -433,3 +433,201 @@
 // for (let i = 0; i < arr.length; i++) {
 //   console.log(arr[i]);
 // }
+
+
+// 
+
+// 1️⃣ Reverse String (WITHOUT built-in methods)
+
+// ❌ No split(), reverse(), join()
+
+// let str ="hello"
+// let reverse= ""
+
+// for(let i= str.length -1; i>0;i--){
+//   reverse = reverse + str[i];
+// }
+
+// console.log(reverse);
+
+
+// // 3️⃣ Remove Duplicates from Array
+// let array = [1,2,2,3,4,4,5]
+
+// let unique = [];
+
+// for(let i =0 ; i < array.length; i++){
+//   if(!unique.includes(array[i])){
+//     unique.push(array[i]);
+//   }
+// }
+
+// console.log(unique);
+
+
+
+// let array = [1,2,2,3,4,4,5]
+
+// let unique = [... new Set(array)];
+// console.log(unique);
+
+// 4️⃣ Frequency Counter (VERY IMPORTANT 🔥)
+// [1,2,2,3,3,3]
+
+// 👉 Output:
+
+// {
+//   1: 1,
+//   2: 2,
+//   3: 3
+// }
+
+
+// let array = [1,2,2,3,3,3,3]
+// let freq = []
+
+// for( let i=0; i < array.length ; i++){
+//   let num = array[i]
+//   if(freq[num]){
+//     freq[num] = freq[num] +1
+//   }else{
+//     freq[num]=1
+//   }
+// }
+
+// console.log(freq);
+
+// 5️⃣ Find Max WITHOUT loop shortcut methods
+// [5, 1, 9, 3, 7]
+
+// 👉 Output:
+
+// 9
+
+// let array = [5, 1, 9, 3, 7]
+// let max = Math.max(...array)
+// console.log(max);
+
+// let array = [5, 1, 9, 3, 7]
+
+// let max = []
+
+// for( let i=0; i<array.length; i++){
+//   if(array[i] > max){
+//     max = array[i]
+//   }
+// }
+// console.log(max);
+
+
+// // 6️⃣ Count Words in String
+// let str ="javascript is awesome"
+
+// let string = str.split(" ")
+
+// let count = string.length
+
+// console.log(count);
+
+// 7️⃣ Custom Map Function (IMPORTANT 🔥)
+
+// Create your own map:
+
+//  let str = [1,2,3]
+
+// let double = str.map((num)=> num * 2)
+
+// console.log(double);
+
+
+
+// // 8️⃣ Shopping Cart Total + Discount (REAL WORLD 💰)
+// let cart = [100, 200, 300];
+
+// let total = cart.reduce((acc, cval) => acc+cval, 0)
+// let discount = 0;
+// if(total > 500){
+//   discount = total * 10 / 100
+// }else{
+//   discount=0
+// }
+
+// let finalPrice = total - discount
+// console.log(finalPrice);
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<level 3>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// // 1️⃣ Students Ka Average Marks
+// let students = [
+//   { name: "Ali", marks: 80 },
+//   { name: "Ahmed", marks: 60 },
+//   { name: "Sara", marks: 90 }
+// ];
+
+// let TotalMarks = students.reduce((acc,cval)=> acc + cval.marks,0);
+// let average = TotalMarks / students.length
+
+// for(let i =0; i < students.length; i++){
+//   if(students[i].marks >= 70 ){
+//     console.log(students[i].name +" "+ "Pass");
+    
+//   }else{
+//     console.log(students[i].name + " "+"Fail");
+    
+//   }
+// }
+
+// let topstudent = students[0]
+// for(let  i=1 ; i< students.length; i++){
+//   if(students[i].marks > topstudent.marks){
+//     topstudent = students[i]
+//   }
+// }
+
+// let PassStudents = 0;
+// for(let i =0 ; i < students.length ; i++){
+//   if(students[i].marks > 70){
+//     PassStudents ++ 
+//   }
+// }
+
+// console.log(PassStudents);
+
+// console.log("Top Student = " , topstudent);
+
+// console.log(average);
+
+
+// 5️⃣ Shopping Cart with Objects (VERY IMPORTANT 🔥)
+let cart = [
+  { item: "Shirt", price: 500 },
+  { item: "Shoes", price: 1500 },
+  { item: "Cap", price: 300 }
+];
+
+let total = cart.reduce((acc,cval) => acc + cval.price, 0) ;
+let Discount = total > 2000 ? total*10/100 : 0;
+let finalPrice = total - Discount
+
+console.log(finalPrice);
+
+let shoesAvailable = cart.some(product => product.item.toLowerCase() === "shoes".toLowerCase())
+
+console.log(shoesAvailable);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
